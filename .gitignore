@@ -29,6 +29,31 @@ Makefile
 venv/
 env/
 .venv
+.venv-conda/
+
+# SDK headers (copied from deb packages)
+teco/dlpack/
+teco/dmlc/
+teco/dyn/
+teco/tvm/
+teco/teco_infer_dyn/
+teco/teco_inference_api.h
+teco/teco_inference_common.h
+teco/teco_inference_future.h
+teco/teco_inference_plugin.h
+teco/teco_inference_tensor.h
+teco/teco_inference_utils.h
+teco/plugin/register_op.h
+teco/plugin/logging/
+teco/plugin/teco_inference_plugin.h
+
+# Copied SDK sources
+src/
+src_tvm/
+3rdparty/
+
+# Test build
+test/build_teco/
 
 # OS
 .DS_Store
