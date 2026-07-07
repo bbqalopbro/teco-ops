@@ -72,12 +72,16 @@ file(GLOB_RECURSE SRC_UAL_COMMON "${OPS_DIR}/ual/com/*.cpp")
 file(GLOB_RECURSE SRC_UAL_OPS "${OPS_DIR}/ual/ops/*/*.cpp")
 file(GLOB_RECURSE SRC_UAL_KERNEL "${OPS_DIR}/ual/kernel/*/*.scpp")
 
+# Hal DMA 源文件
+set(SRC_HAL_DMA "${OPS_DIR}/../thirdparty/teco-hal/src/dma.scpp")
+
 list(APPEND SRC_ALL
     ${SRC_INTERFACE_COMMON}
     ${SRC_INTERFACE_OPS}
     ${SRC_UAL_COMMON}
     ${SRC_UAL_OPS}
-    ${SRC_UAL_KERNEL})
+    ${SRC_UAL_KERNEL}
+    ${SRC_HAL_DMA})
 
 set(complie_options -O3 -msimd -mslave -fPIC -flto -x sdaa -std=c++17 -Wno-unused-command-line-argument --sdaa-device-lib=${OPS_DIR}/../thirdparty/teco-hal/lib/teco_hal.bc)
 add_definitions(-DUSE_TECO)
